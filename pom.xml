@@ -62,6 +62,24 @@
     </dependencies>
 
     <build>
+        <resources>
+            <resource>
+                <directory>dist</directory>
+                <filtering>true</filtering>
+                <targetPath>browser</targetPath>
+                <includes>
+                    <include>**/*.html</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>dist</directory>
+                <filtering>false</filtering>
+                <targetPath>browser</targetPath>
+                <excludes>
+                    <exclude>**/*.html</exclude>
+                </excludes>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
